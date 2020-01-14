@@ -1,0 +1,90 @@
+<div class="slider slider--full">
+    <!-- <div class="slider slider--fixed"> -->
+    <!-- <div class="slider slider--proportional slider--proportional--16x9"> -->
+    <div class="slider__inner">
+        <input checked type="radio" name="slider__radiobox" id="slider__radiobox--1" class="slider__radiobox slider__radiobox--1"><label for="slider__radiobox--1" class="slider__radiobox-label slider__radiobox-label--item slider__radiobox-label--item--1"></label>
+        <label for="slider__radiobox--4" class="slider__radiobox-label slider__radiobox-label--prev slider__radiobox-label--prev--4"></label><label for="slider__radiobox--2" class="slider__radiobox-label slider__radiobox-label--next slider__radiobox-label--next--2"></label>
+        <input type="radio" name="slider__radiobox" id="slider__radiobox--2" class="slider__radiobox slider__radiobox--2"><label for="slider__radiobox--2" class="slider__radiobox-label slider__radiobox-label--item slider__radiobox-label--item--2"></label>
+        <label for="slider__radiobox--1" class="slider__radiobox-label slider__radiobox-label--prev slider__radiobox-label--prev--1"></label><label for="slider__radiobox--3" class="slider__radiobox-label slider__radiobox-label--next slider__radiobox-label--next--3"></label>
+        <input type="radio" name="slider__radiobox" id="slider__radiobox--3" class="slider__radiobox slider__radiobox--3"><label for="slider__radiobox--3" class="slider__radiobox-label slider__radiobox-label--item slider__radiobox-label--item--3"></label>
+        <label for="slider__radiobox--2" class="slider__radiobox-label slider__radiobox-label--prev slider__radiobox-label--prev--2"></label><label for="slider__radiobox--4" class="slider__radiobox-label slider__radiobox-label--next slider__radiobox-label--next--4"></label>
+        <input type="radio" name="slider__radiobox" id="slider__radiobox--4" class="slider__radiobox slider__radiobox--4"><label for="slider__radiobox--4" class="slider__radiobox-label slider__radiobox-label--item slider__radiobox-label--item--4"></label>
+        <label for="slider__radiobox--3" class="slider__radiobox-label slider__radiobox-label--prev slider__radiobox-label--prev--3"></label><label for="slider__radiobox--1" class="slider__radiobox-label slider__radiobox-label--next slider__radiobox-label--next--1"></label>
+
+        <div class="slider__slides">
+            <div class="slider__slide slider__slide--1" style="background-image: url('http://trapecio.uy/wp-content/uploads/2018/08/background-como-trabajamos-1000px.jpg');"></div>
+            <div class="slider__slide slider__slide--2" style="background-image: url('http://trapecio.uy/wp-content/uploads/2018/08/background-como-trabajamos-1000px.jpg');"></div>
+            <div class="slider__slide slider__slide--3" style="background-image: url('http://trapecio.uy/wp-content/uploads/2018/08/background-como-trabajamos-1000px.jpg');"></div>
+            <div class="slider__slide slider__slide--4" style="background-image: url('http://trapecio.uy/wp-content/uploads/2018/08/background-como-trabajamos-1000px.jpg');"></div>
+        </div>
+    </div>
+</div>
+<!-- CAROUSEL OWL -->
+
+<owl-carousel [options]="mySlideOptions" [items]="images" [carouselClasses]="['owl-theme', 'sliding']" >
+    <div class="item" *ngFor="let image of mySlideImages;let i = index">
+    <div>
+    <img src={{image}}/>
+    </div>
+    </div>
+    </owl-carousel>
+    
+
+<!-- TARJETAS -->
+
+<br>
+
+<H2><Strong>Ver Proveedores por Categorias</Strong></H2>
+
+
+<section style="width: 100%;height: auto;background-color: #EAEAE4;padding: 40px;" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="gappx">
+
+    <mat-card style="text-align: center;" fxLayoutAlign="center center" color="accent" matRipple style="width: 200px;height: 300px;">
+        Tecnologia y Electronica
+    </mat-card>
+
+    <mat-card fxLayoutAlign="space-around center" matRipple style="width: 200px;height: 300px;">
+        Hogar, Auto y Construcción
+    </mat-card>
+
+    <mat-card fxLayoutAlign="space-around center" matRipple style="width: 200px;height: 300px;">
+        Oficina, Deportes y Entretenimiento
+    </mat-card>
+
+    <mat-card fxLayoutAlign="space-around center" matRipple style="width: 200px;height: 300px;">
+        Industria, Metalurgia y Quimicos
+    </mat-card>
+
+</section>
+<section fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="gappx">
+    <h2>¿Quienes Somos?</h2>
+    <div class="seccion1" fxLayout="row" fxLayoutAlign="space-evenly center" style="width: 100%;height: auto;background-color: rgb(181, 229, 238);">
+        <div class="texto"  style="width: 50%;text-align: justify;" style="padding: 60px; color: black;">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi ipsum incidunt qui quisquam ut numquam facere, quas eaque quasi? Perferendis fugiat quis dicta sunt eaque obcaecati iure ratione. Dicta, dolores. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Tempore rerum dolore temporibus fugit natus consequatur placeat architecto repudiandae error accusantium molestias vel enim, debitis vero odit recusandae molestiae ipsa consequuntur. Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Quod voluptate sunt, aut nostrum dicta magnam esse necessitatibus odit. Ad voluptates quasi, fugit optio minima corrupti modi ratione accusamus consequatur qui.
+            </p>
+        </div>
+        <div class="imagen">
+            <img src="http://trapecio.uy/wp-content/uploads/2018/08/background-como-trabajamos-1000px.jpg">
+        </div>
+    </div>
+</section>
+<br>
+<section>
+    <div class="seccion2" fxLayout="row" fxLayoutAlign="space-evenly center" style="padding: 30px;background-color: #224D85; color: whitesmoke;">
+        <div class="comentarios" style="width: 20%;text-align: justify;">
+            <label><strong>Comentarios</strong></label>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga inventore odit dolor consequuntur eaque vero nostrum veritatis amet dolores sit aut hic molestias corporis sapiente, distinctio illo doloremque. In, cupiditate.</p>
+        </div>
+        <div class="cards" fxLayout="row">
+            <mat-card style="width: 300px;height: 150px;">
+
+            </mat-card>
+            <mat-card style="width: 300px;height: 150px;margin-left: 20px;">
+
+            </mat-card>
+        </div>
+    </div>
+</section>
+<br>

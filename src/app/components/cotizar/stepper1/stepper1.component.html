@@ -1,0 +1,106 @@
+<div *ngIf="subcategorias;then subcategoria else categoria">
+    <!-- AQUI APARECEN LAS SUBCATEGORIAS -->
+</div>
+<ng-template #subcategoria>
+    <div *ngFor="let cat of misCategorias">
+        <button mat-stroked-button color="primary" *ngFor="let sub of cat.subcategorias" [ngSwitch]="cat.subcategorias" (click)="anadirSubCategoria(sub)">
+            {{sub}}
+        </button>
+    </div>
+</ng-template>
+
+<ng-template #categoria>
+    <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="gappx">
+        <button color="warn" mat-raised-button *ngFor="let cat of misCategorias" style="width: 200px;height: 300px;" (click)="anadirCategoria(cat.categoria)">{{cat.categoria}}</button>
+    </div>
+</ng-template>
+
+
+<!-- <div fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="gappx">
+
+    <div *ngIf="subcategorias; then construccion else categoria">
+    </div>
+    <div *ngIf="subcategorias; then abarrotes else categoria">
+    </div>
+    <div *ngIf="subcategorias; then tecnologia else categoria">
+    </div>
+
+
+    <ng-template #construccion *ngIf="cat.categoria === 'CONSTRUCCION'">
+        <button mat-stroked-button color="primary" *ngFor="let sub of cat.subcategorias" [ngSwitch]="cat.subcategorias">{{sub}}</button>
+    </ng-template>
+
+    <ng-template #abarrotes *ngIf="cat.categoria === 'ABARROTES'">
+        <button mat-stroked-button color="primary" *ngFor="let sub of cat.subcategorias" [ngSwitch]="cat.subcategorias">{{sub}}</button>
+    </ng-template>
+
+    <ng-template #tecnologia *ngIf="cat.categoria === 'TECNOLOGIA'">
+        <button mat-stroked-button color="primary" *ngFor="let sub of cat.subcategorias" [ngSwitch]="cat.subcategorias">{{sub}}</button>
+    </ng-template>
+
+    <ng-template #categoria>
+        <div *ngFor="let cat of misCategorias">
+            <button mat-raised-button color="primary" (click)="anadirCategoria(cat.categoria)">{{cat.categoria}}</button>
+        </div>
+    </ng-template> -->
+
+
+<!-- <ng-container *ngFor="let cat of misCategorias">
+        <button mat-raised-button color="primary" (click)="anadirCategoria(cat.categoria);">{{cat.categoria}}</button>
+
+        <ng-template #construccion *ngIf="cat.categoria === 'CONSTRUCCION'">
+            <button mat-stroked-button color="primary" *ngFor="let sub of cat.subcategorias" [ngSwitch]="cat.subcategorias">{{sub}}</button>
+        </ng-template>
+
+        <ng-template #abarrotes *ngIf="!cat.categoria === 'ABARROTES'">
+            <button mat-stroked-button color="primary" *ngFor="let sub of cat.subcategorias" [ngSwitch]="cat.subcategorias">{{sub}}</button>
+        </ng-template>
+
+        <ng-template #tecnologia *ngIf="!cat.categoria === 'TECNOLOGIA'">
+            <button mat-stroked-button color="primary" *ngFor="let sub of cat.subcategorias" [ngSwitch]="cat.subcategorias">{{sub}}</button>
+        </ng-template>
+
+    </ng-container> -->
+<!-- </div> -->
+
+
+<!-- <div *ngIf="subcategorias;then logout else login"></div>
+
+<ng-template #logout>
+    Subcategoria {{subcategorias}}
+</ng-template>
+
+<ng-template #login>
+    <button (click)="subcategorias = 'Ferreteria'">Boton</button>
+    <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="gappx">
+        <button *ngFor="let categorias of misCategorias" mat-raised-button color="primary" (click)="subcategorias ==='categorias.subcategorias'">{{categorias.categoria}}</button>
+    </div>
+</ng-template> -->
+
+
+
+<!-- <form [formGroup]="regForm">
+
+</form> -->
+
+
+
+
+<!-- <div *ngFor="let cat of misCategorias">
+    <button mat-stroked-button color="primary" *ngFor="let sub of cat.subcategorias" [ngSwitch]="cat.subcategorias" (click)="anadirSubcategoria(sub)">
+{{sub}}
+</button>
+
+</div>
+
+
+<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx" *ngIf="mostrar">
+    <button mat-raised-button color="primary" type="button" matStepperPrevious>Atras</button> &nbsp;
+    <button mat-raised-button color="warn" type="button" matStepperNext (click)="step2Submitted()">Siguiente</button>
+</div> -->
+
+<!-- <div fxLayoutAlign="space-around center" style="margin-top: 10px;margin-bottom: 10px;height: 500px;">
+    <button *ngFor="let cat of misCategorias "  color="primary" mat-raised-button (click)="anadirCategoria(cat.categoria)">
+        {{ cat.categoria }}
+    </button>
+</div> -->

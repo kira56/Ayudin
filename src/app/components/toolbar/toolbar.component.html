@@ -1,0 +1,48 @@
+<div class="navbar">
+    <a href="#" class="logo">Logo</a>
+    <ul class="nav" routerLinkActive="active" fxLayout="row" fxLayoutAlign="space-evenly center">
+        <li>
+            <button *ngIf="!user" style="width: 120px;height: 50px;" mat-raised-button color="primary" [routerLink]="['login']">Ingresa</button>
+            <button class="animated bounce infinite slow" *ngIf="!user" style="width: 120px;height: 50px;;margin-left: 5px;" mat-raised-button color="accent" [routerLink]="['register']">Registrate</button>
+        </li>
+        <li style="color: #000;margin-top: 4px;" *ngIf="user"><a>{{user.name}}</a>
+            <button mat-button [matMenuTriggerFor]="menu">
+                <mat-icon>person</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <!-- <ng-template matMenuContent> -->
+                <div style="margin-top: 10px;" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
+                    <img src="{{user.photoUrl}}" style="border-radius: 50%;" width="70px">
+                </div>
+                <button mat-menu-item [routerLink]="['pages','usuarioCliente']"><mat-icon style="margin-left: 10px;" matSuffix >perm_identity</mat-icon>Perfil Usuario </button>
+                <button mat-menu-item [routerLink]="['pages','usuarioProveedor']"><mat-icon style="margin-left: 10px;" matSuffix >perm_identity</mat-icon>Perfil Proveedor </button>
+                <button mat-menu-item><mat-icon style="margin-left: 10px;" matSuffix >settings_applications</mat-icon>Configuracion</button>
+                <button mat-menu-item><mat-icon style="margin-left: 10px;" matSuffix >mail</mat-icon>Mensajes</button>
+                <button mat-menu-item (click)="signOut()"><mat-icon style="margin-left: 10px;" matSuffix >assignment_return</mat-icon>Cerrar Sesion</button>
+                <!-- </ng-template> -->
+            </mat-menu>
+
+        </li>
+    </ul>
+
+</div>
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="gappx" routerLinkActive="active">
+    <mat-list>
+        <mat-list-item style="color: #fff;" [routerLink]="['home']"> Inicio </mat-list-item>
+    </mat-list>
+    <mat-list>
+        <mat-list-item style="color: #fff;"> Sobre Nosotros </mat-list-item>
+    </mat-list>
+    <mat-list>
+        <mat-list-item style="color: #fff;" [routerLink]="['cotizar']"> A Cotizar! </mat-list-item>
+    </mat-list>
+    <mat-list>
+        <mat-list-item style="color: #fff;"> Categorias </mat-list-item>
+    </mat-list>
+    <mat-list>
+        <mat-list-item style="color: #fff;"> Tus Cotizaciones</mat-list-item>
+    </mat-list>
+    <mat-list>
+        <mat-list-item style="color: #fff;"> Opina y Valora </mat-list-item>
+    </mat-list>
+</mat-toolbar>
